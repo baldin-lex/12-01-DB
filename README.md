@@ -39,52 +39,52 @@
 - идентификатор структурного подразделения, внешний ключ, integer).
 #
 ### <ins>Решение:</ins>
-```
-worker (
-worker_id primary_key,
-last_name VARCHAR(30),
-first_name VARCHAR(20),
-patronymic VARCHAR(30),
-date_of_em DATE,
-position_id NUMERIC,
-division_id NUMERIC,
-salary DECIMAL/NUMERIC,
-address_id NUMERIC,
-project_id NUMERIC,
+```SQL
+CREATE TABLE worker (
+  worker_id primary_key,
+  last_name VARCHAR(30),
+  first_name VARCHAR(20),
+  patronymic VARCHAR(30),
+  date_of_em DATE,
+  position_id NUMERIC,
+  division_id NUMERIC,
+  salary DECIMAL/NUMERIC,
+  address_id NUMERIC,
+  project_id NUMERIC
 )
 
-salary (
-salary_id primary_key,
-pay_off NUMERIC
+CREATE TABLE salary (
+  salary_id primary_key,
+  pay_off NUMERIC
 )
 
-position (
-position_id primary_key,
-division_id NUMERIC
+CREATE TABLE position (
+  position_id primary_key,
+  division_id NUMERIC
 )
 
-division (
-division_id primary_key,
-departament VARCHAR(30),
-type VARCHAR(20)
+CREATE TABLE division (
+  division_id primary_key,
+  departament VARCHAR(30),
+  type VARCHAR(20)
 )
 
-date_of_em (
-date_of_em primary_key,
-date DATE
+CREATE TABLE date_of_em (
+  date_of_em primary_key,
+  date DATE
 )
 
-address (
-address_id primary_key,
-country VARCHAR(30),
-city VARCHAR(30),
-street VARCHAR(30),
-building NUMERIC
+CREATE TABLE address (
+  address_id primary_key,
+  country VARCHAR(30),
+  city VARCHAR(30),
+  street VARCHAR(30),
+  building NUMERIC
 )
 
-project (
-project_id primary_key,
-project_name VARCHAR(30)
+CREATE TABLE project (
+  project_id primary_key,
+  project_name VARCHAR(30)
 )
 ```
 ## Дополнительные задания (со звёздочкой*)
